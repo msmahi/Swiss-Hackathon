@@ -2,21 +2,22 @@
 
 int main(void) {
     
-    int X,P,i;
+    int X,P,i,sum;
     printf("Please enter the Price and Discount\n");
     scanf("%d%d",&X,&P);
+    sum=0;
     
     
     for (i=1;;i++)
     {
-        X=0.01*P*X;
+        sum=sum+X;
+	    X=0.01*(100-P)*X;	
         if (X==0)
         {
-            printf("amount of necessary to order for free is %d",i);
+            printf("amount to be spend for free coffee is %d",sum);
             break;
         }
     }
 
 	return 0;
 }
-
