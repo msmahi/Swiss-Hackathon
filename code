@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void) {
+    
+    int X,P,i;
+    printf("Please enter the Price and Discount\n");
+    scanf("%d%d",&X,&P);
+    
+    
+    for (i=1;;i++)
+    {
+        X=0.01*P*X;
+        if (X==0)
+        {
+            printf("amount of necessary to order for free is %d",i);
+            break;
+        }
+    }
+
+	return 0;
+}
+
